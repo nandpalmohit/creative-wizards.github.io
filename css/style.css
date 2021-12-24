@@ -1,0 +1,115 @@
+:root{
+	--dark-color: #234d52;
+	--primary-color: #5E8B7E;
+	--secondary-color:  #A7C4BC;
+	--light-color:  #e1eef2;
+}
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+  	font-family: 'San Francisco Regular';
+}
+/* fonts class */
+.Sans-Light{
+	font-family: 'San Francisco Light', sans-serif !important;
+}
+.Sans{
+	font-family: 'San Francisco Regular', sans-serif !important;
+}
+.Sans-Medium{
+	font-family: 'San Francisco Medium', sans-serif !important;
+}
+.Sans-Heavy{
+	font-family: 'San Francisco Heavy', sans-serif !important;
+}
+.Sans-Semibold{
+	font-family: 'San Francisco Semibold', sans-serif !important;
+}
+.Sans-Bold{
+	font-family: 'San Francisco Bold', sans-serif !important;
+}
+.Sans-Black{
+	font-family: 'San Francisco Black', sans-serif !important;
+}
+
+/* css  */
+a{
+	text-decoration: none;
+}
+.topbar{
+	background-color: var(--light-color);
+}
+.topbar-social,.topbar-data{
+	color: var(--primary-color);
+	margin: 0 5px;
+	font-size: 14px;
+}
+.topbar-social:hover,.topbar-data:hover{
+	color: var(--dark-color);
+	text-decoration: none;
+}
+
+
+header{
+	height: auto;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	box-shadow: 0 0 10px 2px rgba(0,0,0,0.05);
+}
+header .custom-navbar a{ 
+	color: var(--primary-color);
+  	font-family: 'San Francisco Medium';
+  	font-size: 18px;
+
+}
+header .custom-navbar a:hover{
+	color: var(--dark-color);
+} 
+
+.carousel-item img{
+	filter: brightness(0.25);
+}
+.carousel-item .carousel-caption{
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: 50%;
+	width: 60%;
+	transform: translate(-50%,-50%);
+}
+.cw-btn{
+	background-color: lightgrey !important;
+	color: var(--dark-color) !important;
+	border:  1px solid var(--dark-color) !important;
+	box-shadow: 0 0 5px 1px var(--dark-color);
+}
+
+/* San Francisco fonts*/
+@font-face {
+  	font-family: 'San Francisco Black';
+  	src: url(/assets/fonts/SF-Pro-Display-Black.otf) format('truetype');
+}
+@font-face {
+  	font-family: 'San Francisco Heavy';
+  	src: url(/assets/fonts/SF-Pro-Display-Heavy.otf) format('truetype');
+}
+@font-face {
+  	font-family: 'San Francisco Bold';
+  	src: url(/assets/fonts/SF-Pro-Display-Bold.otf) format('truetype');
+}
+@font-face {
+  	font-family: 'San Francisco Semibold';
+  	src: url(/assets/fonts/SF-Pro-Display-Semibold.otf) format('truetype');
+}
+@font-face {
+  	font-family: 'San Francisco Medium';
+  	src: url(/assets/fonts/SF-Pro-Text-Medium.otf) format('truetype');
+}
+@font-face {
+  	font-family: 'San Francisco Regular';
+  	src: url(/assets/fonts/SF-Pro-Text-Regular.otf) format('truetype');
+}
+@font-face {
+  	font-family: 'San Francisco Light';
+  	src: url(/assets/fonts/SF-Pro-Text-Light.otf) format('truetype');
+}
