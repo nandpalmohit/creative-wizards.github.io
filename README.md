@@ -1,0 +1,2 @@
+# creative-wizard
+Creative wizards E-learning and Design solution is ISO:9001-2015 certified Training institute provides industry-oriented training in CAD, CAM, CAE, IT industry. We offer training in a wide range of engineering software and coding languages. We also provide design services in Architecture, Engineering &amp; Construction (AEC), Computer-aided structural design and services (CASAD).
