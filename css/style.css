@@ -1,8 +1,9 @@
 :root{
-	--dark-color: #234d52;
-	--primary-color: #5E8B7E;
-	--secondary-color:  #A7C4BC;
-	--light-color:  #e1eef2;
+	--dark-color: #293241;
+	--primary-color: #3d5a80;
+	--secondary-color:  #ee6c4d;
+	--light-color:  #e0fbfc;
+	--info-color: #98c1d9;
 }
 *{
 	padding: 0;
@@ -38,7 +39,7 @@ a{
 	text-decoration: none;
 }
 .topbar{
-	background-color: var(--light-color);
+	border-bottom: 2px solid rgba(0,0,0,0.05) !important;
 }
 .topbar-social,.topbar-data{
 	color: var(--primary-color);
@@ -59,11 +60,12 @@ header{
 header .custom-navbar a{ 
 	color: var(--primary-color);
   	font-family: 'San Francisco Medium';
-  	font-size: 18px;
-
+  	font-size: 16px;
+  	transition: .3s;
 }
-header .custom-navbar a:hover{
-	color: var(--dark-color);
+header .custom-navbar a:hover,header .custom-navbar a.active{
+	color: var(--secondary-color);
+  	transition: .3s;
 } 
 
 .carousel-item img{
@@ -78,38 +80,75 @@ header .custom-navbar a:hover{
 	transform: translate(-50%,-50%);
 }
 .cw-btn{
-	background-color: lightgrey !important;
-	color: var(--dark-color) !important;
-	border:  1px solid var(--dark-color) !important;
-	box-shadow: 0 0 5px 1px var(--dark-color);
+	background-color: var(--secondary-color) !important;
+	color: var(--light-color) !important;
+	padding: 10px 14px !important;
+	border: 2px solid var(--secondary-color) !important;
+  	transition: .3s;
+}
+.cw-btn:hover{
+	background-color: transparent !important;
+	border: 2px solid var(--light-color) !important;
+	color: var(--light-color) !important;
+  	transition: .3s;
+}
+
+/* container */
+.container .cw-head{
+	z-index: 1;
+}
+
+
+.container .cw-head::before{
+	background-color: var(--light-color);
+	height: 35px;
+	width: 50px;
+	position: absolute;
+	/*left: -4px;*/
+	top: 15px;
+	content: '';
+	z-index: -1;
+	border-bottom: 4px solid var(--info-color);
 }
 
 /* San Francisco fonts*/
 @font-face {
   	font-family: 'San Francisco Black';
-  	src: url(/assets/fonts/SF-Pro-Display-Black.otf) format('truetype');
+  	src: url(fonts/SF-Pro-Display-Black.otf) format('truetype');
 }
 @font-face {
   	font-family: 'San Francisco Heavy';
-  	src: url(/assets/fonts/SF-Pro-Display-Heavy.otf) format('truetype');
+  	src: url(fonts/SF-Pro-Display-Heavy.otf) format('truetype');
 }
 @font-face {
   	font-family: 'San Francisco Bold';
-  	src: url(/assets/fonts/SF-Pro-Display-Bold.otf) format('truetype');
+  	src: url(fonts/SF-Pro-Display-Bold.otf) format('truetype');
 }
 @font-face {
   	font-family: 'San Francisco Semibold';
-  	src: url(/assets/fonts/SF-Pro-Display-Semibold.otf) format('truetype');
+  	src: url(fonts/SF-Pro-Display-Semibold.otf) format('truetype');
 }
 @font-face {
   	font-family: 'San Francisco Medium';
-  	src: url(/assets/fonts/SF-Pro-Text-Medium.otf) format('truetype');
+  	src: url(fonts/SF-Pro-Text-Medium.otf) format('truetype');
 }
 @font-face {
   	font-family: 'San Francisco Regular';
-  	src: url(/assets/fonts/SF-Pro-Text-Regular.otf) format('truetype');
+  	src: url(fonts/SF-Pro-Text-Regular.otf) format('truetype');
 }
 @font-face {
   	font-family: 'San Francisco Light';
-  	src: url(/assets/fonts/SF-Pro-Text-Light.otf) format('truetype');
+  	src: url(fonts/SF-Pro-Text-Light.otf) format('truetype');
+}
+
+@media only screen and (max-width: 1024px){
+	.carousel-item img{
+		height: 90vh;
+		width: auto;
+		object-fit: cover;
+	}
+	.carousel-item .carousel-caption{
+		top: 45%;
+		width: 70%;
+	}	
 }
