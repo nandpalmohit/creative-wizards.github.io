@@ -40,6 +40,7 @@ a{
 }
 .topbar{
 	border-bottom: 2px solid rgba(0,0,0,0.05) !important;
+	background-color: white;
 }
 .topbar-social,.topbar-data{
 	color: var(--primary-color);
@@ -51,11 +52,13 @@ a{
 	text-decoration: none;
 }
 
-
 header{
 	height: auto;
 	border-bottom: 1px solid rgba(0,0,0,0.1);
 	box-shadow: 0 0 10px 2px rgba(0,0,0,0.05);
+	position: sticky;
+	top: 0;
+	z-index: 100;
 }
 header .custom-navbar a{ 
 	color: var(--primary-color);
@@ -67,7 +70,6 @@ header .custom-navbar a:hover,header .custom-navbar a.active{
 	color: var(--secondary-color);
   	transition: .3s;
 } 
-
 .carousel-item img{
 	filter: brightness(0.25);
 }
@@ -79,10 +81,49 @@ header .custom-navbar a:hover,header .custom-navbar a.active{
 	width: 60%;
 	transform: translate(-50%,-50%);
 }
+/* --- text color --- */
+.cw-dark{
+	color: var(--dark-color);
+}
+.cw-light{
+	color: var(--light-color);
+}
+.cw-primary{
+	color: var(--primary-color);
+}
+.cw-secondary{
+	color: var(--secondary-color);
+}
+.cw-info{
+	color: var(--info-color);
+}
+/* --- background color --- */
+.bg-cw-dark{
+	background-color: var(--dark-color);
+}
+.bg-cw-light{
+	background-color: var(--light-color);
+}
+.bg-cw-primary{
+	background-color: var(--primary-color);
+}
+.bg-cw-secondary{
+	background-color: var(--secondary-color);
+}
+.bg-cw-info{
+	background-color: var(--info-color);
+}
+/* --- hr --- */
+.cw-hr{
+	width: 40%;
+	background-color: var(--info-color);
+	height: 1px;
+}
+/* --- custom btn --- */
 .cw-btn{
 	background-color: var(--secondary-color) !important;
 	color: var(--light-color) !important;
-	padding: 10px 14px !important;
+	padding: 8px 12px !important;
 	border: 2px solid var(--secondary-color) !important;
   	transition: .3s;
 }
@@ -92,14 +133,26 @@ header .custom-navbar a:hover,header .custom-navbar a.active{
 	color: var(--light-color) !important;
   	transition: .3s;
 }
-
-/* container */
-.container .cw-head{
-	z-index: 1;
+.ot-cw-btn:hover{
+	background-color: var(--primary-color) !important;
+	color: white !important;
+	border: 2px solid var(--primary-color) !important;
+  	transition: .3s;
+}
+.ot-cw-btn{
+	padding: 8px 12px !important;
+	background-color: transparent !important;
+	border: 2px solid var(--primary-color) !important;
+	color: var(--primary-color) !important;
+  	transition: .3s;
 }
 
-
-.container .cw-head::before{
+/* cw */
+.cw .cw-head{
+	z-index: 1;
+}
+/* --- heading ---- */
+.cw .cw-head::before{
 	background-color: var(--light-color);
 	height: 35px;
 	width: 50px;
@@ -110,7 +163,62 @@ header .custom-navbar a:hover,header .custom-navbar a.active{
 	z-index: -1;
 	border-bottom: 4px solid var(--info-color);
 }
+/* ---- border ---- */
+.cw-rounded{
+	border-radius: .75em!important;
+}
+/* ----- service ----- */
+.cw .row .cw-sr-text{
+  	font-family: 'San Francisco SemiBold';
+	margin: 0 !important;
+	padding: 12px 0 !important;
+	line-height: 1 !important;
+}
+#services .row:hover{
+	cursor: pointer;
+	box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1), 0px 0px 15px 1px rgba(0,0,0,0.05);
+	background-color: var(--primary-color);
+	color: var(--light-color);
+}
 
+.cw .cw-sr-row{
+	margin: 12px 0;
+}
+.cw .row .cw-sr-num{
+	font-family: 'San Francisco Heavy';
+	margin: 0 !important;
+	padding: 12px 0 !important;
+	line-height: 1 !important;
+	text-align: center;
+	color: var(--light-color);
+
+}
+.cw .row .col-2{
+	background-color: var(--dark-color);
+	border-radius: .75em!important;
+}
+/* --- contact --- */
+#contact.cw{
+	background: url("../assets/img/vs-1.jpg");
+	width: 100%;
+	/*height: 80vh;*/
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	z-index: 0;
+}
+#contact.cw:before{
+	content: "";
+	position: absolute;
+	background: rgba(0,0,0,0.6);
+	opacity: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	min-height: 100%;
+}
 /* San Francisco fonts*/
 @font-face {
   	font-family: 'San Francisco Black';
@@ -150,5 +258,25 @@ header .custom-navbar a:hover,header .custom-navbar a.active{
 	.carousel-item .carousel-caption{
 		top: 45%;
 		width: 70%;
-	}	
+	}
+	#about .row > .col-md-6{
+		margin: 20px 0;
+	}
+	#iso .row.px-5{
+		padding: 0px !important;
+	}
+	.cw-sr-row .col-sm-5 {
+		margin: 10px 0px;
+	}
+	.cw .cw-sr-row {
+    	margin: 0px 0;
+    	text-align: right;
+	}
+	.cw-sr-row .col-sm-5 h5, .cw-sr-row .col-sm-5 h4 {
+		font-size: 16px;
+	}
+
+	.cw-sr-row .col-sm-5:nth-child(1){
+		text-align: left;
+	}
 }
