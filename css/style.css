@@ -4,6 +4,7 @@
 	--secondary-color:  #ee6c4d;
 	--light-color:  #e0fbfc;
 	--info-color: #98c1d9;
+	--muted-color:  #bababa;
 }
 *{
 	padding: 0;
@@ -96,6 +97,9 @@ header .custom-navbar a:hover,header .custom-navbar a.active{
 }
 .cw-info{
 	color: var(--info-color);
+}
+.cw-muted{
+	color: var(--muted-color);
 }
 /* --- background color --- */
 .bg-cw-dark{
@@ -197,8 +201,8 @@ header .custom-navbar a:hover,header .custom-navbar a.active{
 	background-color: var(--dark-color);
 	border-radius: .75em!important;
 }
-/* --- contact --- */
-#contact.cw{
+/* --- vision --- */
+#vision.cw{
 	background: url("../assets/img/vs-1.jpg");
 	width: 100%;
 	/*height: 80vh;*/
@@ -208,7 +212,7 @@ header .custom-navbar a:hover,header .custom-navbar a.active{
 	position: relative;
 	z-index: 0;
 }
-#contact.cw:before{
+#vision.cw:before{
 	content: "";
 	position: absolute;
 	background: rgba(0,0,0,0.6);
@@ -218,6 +222,27 @@ header .custom-navbar a:hover,header .custom-navbar a.active{
 	right: 0;
 	z-index: -1;
 	min-height: 100%;
+}
+
+/* --- contact --- */
+#contact a.contact-social{
+	color: var(--info-color);
+	font-size: 18px;
+	margin: 0px 15px 0px 0px;
+}
+#contact a.contact-social:hover{
+	color: var(--primary-color);
+}
+/* --- subscribe --- */
+#footer input.cw-input{
+	background: transparent !important;
+	color: var(--light-color);
+	border-color:  var(--secondary-color);
+	box-shadow: none !important;
+}
+#footer .cw-btn:hover{
+	background: #d45f44 !important;
+	border-color: #d45f44 !important;
 }
 /* San Francisco fonts*/
 @font-face {
@@ -278,5 +303,9 @@ header .custom-navbar a:hover,header .custom-navbar a.active{
 
 	.cw-sr-row .col-sm-5:nth-child(1){
 		text-align: left;
+	}
+	/* footer-content  */
+	#footer-content .col-sm-6{
+		text-align: center;
 	}
 }
