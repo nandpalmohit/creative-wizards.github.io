@@ -167,6 +167,11 @@ header .custom-navbar a:hover,header .custom-navbar a.active{
 	z-index: -1;
 	border-bottom: 4px solid var(--info-color);
 }
+/* --- navbar --- */
+#navbar a.navbar-brand img{
+	filter: saturate(90%), sepia(50%);
+}
+
 /* ---- border ---- */
 .cw-rounded{
 	border-radius: .75em!important;
@@ -191,11 +196,47 @@ header .custom-navbar a:hover,header .custom-navbar a.active{
 .cw .row .cw-sr-num{
 	font-family: 'San Francisco Heavy';
 	margin: 0 !important;
-	padding: 12px 0 !important;
+	padding: 10px 0 !important;
 	line-height: 1 !important;
 	text-align: center;
 	color: var(--light-color);
 
+}
+.cw .row .col-2{
+	background-color: var(--dark-color);
+	border-radius: .75em!important;
+}
+
+/* courses */
+.cw .row .cw-cr-text{
+  	font-family: 'San Francisco SemiBold';
+	margin: 0 !important;
+	padding: 10px 0 !important;
+	line-height: 1.1 !important;
+	font-size: 16px !important;
+}
+#courses .row{
+	background-color: var(--light-color);
+}
+#courses .row:hover{
+	cursor: pointer;
+	box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1), 0px 0px 15px 1px rgba(0,0,0,0.05);
+	background-color: var(--primary-color);
+	color: var(--light-color);
+}
+
+.cw .cw-cr-row{
+	margin: 10px 0;
+}
+.cw .row .cw-cr-num{
+	font-family: 'San Francisco Heavy';
+	margin: 0 !important;
+	padding: 10px 0 !important;
+	line-height: 1 !important;
+	text-align: center;
+	color: var(--light-color);
+	font-size: 16px !important;
+	line-height: 1.1 !important;
 }
 .cw .row .col-2{
 	background-color: var(--dark-color);
