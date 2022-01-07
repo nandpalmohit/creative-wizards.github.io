@@ -47,7 +47,7 @@ a{
 }
 .topbar{
 	border-bottom: 1px solid rgba(0,0,0,0.1) !important;
-	background-color: black;
+	background-color: var(--secondary-color);
 }
 .topbar-social,.topbar-data{
 	color: var(--light-color);
@@ -382,3 +382,5 @@ header .custom-navbar a:hover,header .custom-navbar a.active{
 		text-align: center;
 	}
 }
+
+/*XvL@vuJCzbO6YSKuwaPR*/
