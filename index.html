@@ -82,7 +82,7 @@
                 <div class="carousel-item">
                     <img src="assets/img/header/h3.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption">
-                        <h1 class="Sans-Heavy w-100 d-md-block">We Serve Design Engineering </h1>
+                        <h1 class="Sans-Heavy w-100 d-md-block">We Serve Design Services </h1>
                         <p>Creative wizards training in a wide range of engineering software and coding languages. We also provide design services in Architecture, Engineering & Construction (AEC), Computer-aided structural design and services (CASAD).</p>
                         <button type="button" class="btn cw-btn mt-4">Let's Meet <i class="fas fa-long-arrow-alt-right pl-2"></i></button>
                     </div>
@@ -116,14 +116,16 @@
         <!-- iso container -->
         <div class="container-fluid cw py-5 bg-light" id="iso">
             <div class="row px-5">
-                <div class="col-sm-8 mt-5">
+                <div class="col-sm-6 mt-5">
                     <small class="Sans-Semibold cw-secondary mb-0">ISO certified</small>
                     <h1 class="Sans-Heavy">Certified Training Institute</h1>
                     <hr class="cw-hr">
-                    <p class="Sans-Medium">Creative Wizard has implemented a Quality Management System in comply with standards ISO 9001:2015 certified company to provide Engineering tools Frameworks Training. Our highly motivated and experienced professionals focus on processes and are committed to delivering services of higher quality.</p>
+                    <p class="Sans-Medium">Creative Wizards E-Learning And Design Solutions has implemented a Quality Management System in comply with standards ISO 9001:2015 certified company to provide Engineering tools Frameworks Training. Our highly motivated and experienced professionals focus on processes and are committed to delivering services of higher quality.</p>
+                    <button type="submit" class="btn btn-sm ot-cw-btn Sans-Medium" onclick="location.href='/assets/certificate/iso_certificate.pdf'">Open Certificate <i class="fas fa-long-arrow-alt-right pl-2"></i></button>
+
                 </div>
-                <div class="col-sm-4 text-center">
-                    <img src="assets/iso-2.png" class="" width="80%" alt="">
+                <div class="col-sm-6 text-center">
+                    <img src="assets/img/iso.png" class="" width="60%" alt="">
                 </div>
             </div>
         </div>
@@ -731,18 +733,21 @@
                     <a class="contact-social" href="https://www.linkedin.com/in/creative-wizards-e-learning-and-design-solutions-3b165a226"><i class="fab fa-linkedin"></i></a>
                 </div>
                 <div class="col-md-6 cw-rounded text-center pt-4 pb-3 cw-form">
-                    <form id="contact-Form" method="get">
+                    <form id="contact-Form" method="post" name="contactForm">
                         <div class="form-group">
-                            <input type="text" id="name" class="form-control" name="name" value="" placeholder="Your Full Name">
+                            <input type="text" id="name" class="form-control" name="name" value="" placeholder="Your Full Name" required="">
                         </div>
                         <div class="form-group">
-                            <input type="email" id="mail" class="form-control" name="mail" value="" placeholder="Your Email ID">
+                            <input type="email" id="mail" class="form-control" name="mail" value="" placeholder="Your Email ID" required="">
                         </div>
                         <div class="form-group">
-                            <input type="text" id="subject" class="form-control" name="subject" value="" placeholder="Your Subject">
+                            <input type="number" id="contact" class="form-control" name="contact" value="" placeholder="Your Mobile Number" required="">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" id="message" name="message" rows="4" value="" placeholder="Your Message"></textarea>
+                            <input type="text" id="subject" class="form-control" name="subject" value="" placeholder="Your Subject" required="">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="message" name="message" rows="4" value="" placeholder="Your Message" required=""></textarea>
                         </div>
                         <div class="form-group">
                             <button type="submit" id="submit-Contact-Btn" class="btn btn-block ot-cw-btn">Submit</button>
@@ -759,11 +764,11 @@
             <div class="row mb-5">
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
-                    <form action="">
+                    <form method="post" id="subscribe-form" name="subscribeForm">
                         <div class="input-group mb-2">
-                            <input type="email" class="form-control form-control-lg cw-input" name="" value="" placeholder="">
+                            <input type="email" class="form-control form-control-lg cw-input" name="sub_email" value="" placeholder="Your Email ID" required="">
                             <div class="input-group-append">
-                                <button class="btn cw-btn" type="button">Subscribe*</button>
+                                <button type="submit" class="btn cw-btn subscribe-btn" type="button">Subscribe</button>
                             </div>
                         </div>
                         <small class="cw-muted">You will be received our all the latest news and updates.</small>
@@ -786,6 +791,27 @@
 
     <script type="text/javascript">
 
+        // subscribe form script
+        const scriptURL1 = 'https://script.google.com/macros/s/AKfycbz--ycJI0wgj3juPdhN8w_DotZ3vII9uq6boxnNmNjTVaq8wnK0lpD8MsSv1mJEKAxVFA/exec'
+        const form1 = document.forms['subscribeForm']
+
+        form1.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL1, { method: 'POST', body: new FormData(form1)})
+            .then(response => alert("Thank you for subscribe us."))
+            .catch(error => console.error('Error!', error.message))
+        })
+
+        // contact form script
+        const scriptURL2 = 'https://script.google.com/macros/s/AKfycbzoe66iuiPW_wRUQJozRdhdx6maEaj5HLQpJsVbBd55cr7u5bvM9iT9P_QwmlsSx_k/exec'
+        const form2 = document.forms['contactForm']
+
+        form2.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL2, { method: 'POST', body: new FormData(form2)})
+            .then(response => alert("Thank you for contact us. We will Contact You Soon."))
+            .catch(error => console.error('Error!', error.message))
+        })
     </script>
 
     <!-- bootstrap js -->
