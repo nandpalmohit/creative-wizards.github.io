@@ -299,7 +299,7 @@ header .custom-navbar .dropdown .dropdown-item:hover{
 	color: var(--dark-color);
 }
 #cn #contactMsg, #footer #subMsg{
-	/*display: none;*/
+	display: none;
 }
 /* --- subscribe --- */
 #footer input.cw-input{
