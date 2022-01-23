@@ -149,10 +149,11 @@ header .custom-navbar .dropdown .dropdown-item:hover{
 .cw-btn{
 	background-color: var(--secondary-color) !important;
 	color: var(--light-color) !important;
-	padding: 8px 12px !important;
+	padding: 12px 16px !important;
 	border: 2px solid var(--secondary-color) !important;
   	transition: .3s;
-  	border-radius: 6px !important;
+  	border-radius: 8px !important;
+	font-family: 'San Francisco Semibold', sans-serif !important;
 }
 .cw-btn:hover{
 	background-color: transparent !important;
@@ -160,20 +161,22 @@ header .custom-navbar .dropdown .dropdown-item:hover{
 	color: var(--light-color) !important;
   	transition: .3s;
 }
-.ot-cw-btn:hover{
+.ot-cw-btn:hover, .ot-cw-btn:focus, .ot-cw-btn:active{
 	background-color: var(--primary-color) !important;
 	color: white !important;
 	border: 2px solid var(--primary-color) !important;
   	transition: .3s;
-  	box-shadow: 0px 1px 5px var(--primary-color);
+  	/*box-shadow: 0px 1px 5px var(--primary-color);*/
+  	box-shadow: 0 0 0 2px white, 0 0 0 4px var(--primary-color) !important;
 }
 .ot-cw-btn{
-	padding: 8px 12px !important;
-	background-color: transparent !important;
+	padding: 12px 16px !important;
+	background-color: var(--primary-color) !important;
 	border: 2px solid var(--primary-color) !important;
-	color: var(--primary-color) !important;
+	color: var(--light-color) !important;
   	transition: .3s;
-  	border-radius: 6px !important;
+  	border-radius: 8px !important;
+	font-family: 'San Francisco Semibold', sans-serif !important; 	
 }
 
 /* cw */
@@ -288,41 +291,106 @@ header .custom-navbar .dropdown .dropdown-item:hover{
 	z-index: -1;
 	min-height: 100%;
 }
+/* --- faq --- */
+#faq .card{
+	margin: 10px 0px;
+	border-radius: 8px !important;
+	border: 2px solid var(--light-color) !important;
+}
 
+#faq .card .card-header{
+	background-color: white;
+	padding: 8px 12px !important;
+}
+#faq .card .card-header button{
+	color: var(--dark-color);
+	text-decoration: none;
+	font-family: 'San Francisco Semibold', sans-serif !important;
+}
+#faq .card .card-header button:focus{
+	color: var(--primary-color) !important;
+}
+#faq .card .card-body{
+	font-family: 'San Francisco Regular', sans-serif !important;
+	padding: 16px 24px;
+}
 /* --- contact --- */
 #cn a.contact-social{
-	color: var(--info-color) !important;
+	color: var(--primary-color) !important;
 	font-size: 18px;
 	margin: 0px 15px 0px 0px;
 }
 #cn a.contact-social:hover{
-	color: var(--dark-color);
+	color: var(--dark-color) !important;
 }
 #cn #contactMsg, #footer #subMsg{
 	display: none;
+}
+#cn input, #cn textarea{
+	padding: 8px 12px;
+	border-radius: 8px;
+	min-height: 46px;
+	border-width: 2px;
+}
+#cn input:focus, #cn textarea:focus{
+	border-color: var(--primary-color) !important;
+	border-width: 2px;
+	box-shadow: none !important;
+	color: var(--primary-color);
 }
 /* --- subscribe --- */
 #footer input.cw-input{
 	background: transparent !important;
 	color: var(--muted-color);
-	border-color:  var(--secondary-color);
+	border-color:  var(--muted-color);
 	box-shadow: none !important;
-	border-radius: 6px 0px 0px 6px;
+	border-radius: 8px 0px 0px 8px;
+	padding: 12px 16px;
+	height: 60px;
 }
+#footer input.cw-input:focus{
+	box-shadow: 0px 0px 5px var(--light-color) !important;
+}
+
 #footer .alert, #cn .alert{
 	border-radius: 16px !important;
 }
 #footer .cw-btn{
-	border-radius: 0px 6px 6px 0px !important;
+	border-radius: 0px 8px 8px 0px !important;
+	padding: 12px 16px;
+	background: var(--muted-color) !important;
+	border-color: var(--muted-color) !important;
+	color: var(--dark-color) !important;
+	font-weight: bold;
+	font-family: 'San Francisco Semibold', sans-serif !important;
 }
 #footer .cw-btn:hover{
-	background: #d45f44 !important;
-	border-color: #d45f44 !important;
+	background: var(--light-color) !important;
+	border-color: var(--light-color) !important;
+	box-shadow: 0px 0px 6px var(--light-color);
 }
 #footer a:hover{
 	color: white;
 	text-decoration: none;
 }
+#footer #footer-links .ft-head{
+	font-size: 20px;
+	font-family: 'San Francisco Semibold', sans-serif !important;
+	color: var(--light-color);
+	margin-bottom: 14px;
+}
+
+#footer #footer-links a{
+	font-family: 'San Francisco Regular', sans-serif !important;
+	color: var(--muted-color);
+	display: block;
+	font-size: 14px;
+	height: 24px;
+}
+#footer #footer-links a:hover{
+	color: var(--light-color);
+}
+
 /* San Francisco fonts*/
 @font-face {
   	font-family: 'San Francisco Black';
