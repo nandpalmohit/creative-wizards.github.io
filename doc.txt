@@ -1,0 +1,43 @@
+Civil (Architecture)
+	AutoCAD 2D
+	Building Information Modelling (BIM)
+	Revit architecture
+	Revit MEP
+	Google Sketch
+	3DS Max
+	Vray
+	Lumion
+	Photoshop
+
+
+Civil (project management)
+	Primavera
+	Ms project
+	Ms office for project management
+
+Civil (structure)
+	Revit structure
+	STAAD. Pro
+	STAAD. RCDC
+	STAAD. Foundation
+	CSI ETabs
+	CSI Safe
+	Ms office (Excel for structural engineer)
+
+Computer
+	C, C++, 
+	Java
+	Web Designing
+	App Devlopment
+	python core
+	advanced python
+	machine learning with python
+
+Mechanical
+	AutoCAD 2D
+	Revit MEP
+	PTC CREO 
+	Solid works
+	Solid edge
+	Ansys
+	CATIA
