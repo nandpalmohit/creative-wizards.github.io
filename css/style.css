@@ -98,6 +98,16 @@ header .custom-navbar a:hover,header .custom-navbar a.active{
 	color: var(--secondary-color) !important;
   	transition: .3s;
 } 
+header .custom-navbar .dropdown .dropdown-item{
+	min-width: 180px !important;
+	/*border-bottom: 1px solid rgba(0,0,0,0.04);*/
+	padding: 4px 12px !important;
+	font-size: 14px;
+}
+header .custom-navbar .dropdown .dropdown-item.active{
+	background: white !important;
+	color: var(--secondary-color) !important;
+}
 header .custom-navbar .dropdown .dropdown-item:hover{
 	background-color: transparent !important;
 	/*color: var(--dark-color) !important;*/
@@ -115,22 +125,22 @@ header .custom-navbar .dropdown .dropdown-item:hover{
 }
 /* --- text color --- */
 .cw-dark{
-	color: var(--dark-color);
+	color: var(--dark-color) !important;
 }
 .cw-light{
-	color: var(--light-color);
+	color: var(--light-color) !important;
 }
 .cw-primary{
-	color: var(--primary-color);
+	color: var(--primary-color) !important;
 }
 .cw-secondary{
-	color: var(--secondary-color);
+	color: var(--secondary-color) !important;
 }
 .cw-info{
-	color: var(--info-color);
+	color: var(--info-color) !important;
 }
 .cw-muted{
-	color: var(--muted-color);
+	color: var(--muted-color) !important;
 }
 /* --- background color --- */
 .bg-cw-dark{
@@ -143,17 +153,17 @@ header .custom-navbar .dropdown .dropdown-item:hover{
 	background-color: var(--primary-color) !important;
 }
 .bg-cw-secondary{
-	background-color: var(--secondary-color);
+	background-color: var(--secondary-color) !important;
 }
 .bg-cw-info{
-	background-color: var(--info-color);
+	background-color: var(--info-color) !important;
 }
 .bg-cw-muted{
-	background-color: var(--muted-color);
+	background-color: var(--muted-color) !important;
 }
 /* --- hr --- */
 .cw-hr{
-	width: 33%;
+	width: 10rem;
 	background-color: var(--info-color);
 	height: 1px;
 }
@@ -227,7 +237,6 @@ header .custom-navbar .dropdown .dropdown-item:hover{
 #navbar a.navbar-brand img{
 	filter: saturate(90%), sepia(50%);
 }
-
 /* ---- border ---- */
 .cw-rounded{
 	border-radius: .75em!important;
@@ -269,7 +278,7 @@ header .custom-navbar .dropdown .dropdown-item:hover{
 }
 /* --- vision --- */
 #vision.cw{
-	background: url("../assets/img/vs-1.jpg");
+	background: url("../assets/bg/svg/poly.svg");
 	width: 100%;
 	/*height: 80vh;*/
 	background-position: center;
@@ -435,14 +444,15 @@ header .custom-navbar .dropdown .dropdown-item:hover{
 #trSlider{
 	background-image: radial-gradient(circle, #070039, #0b0038, #0f0037, #110036, #140035);
 	width: 100%;
-	height: 350px;
+	min-height: 350px;
 }
+
 #trSlider .slider-item .slider-caption{
 	position: absolute;
 	display: block;
-	top: 40%;
+	top: 45%;
 	left: 20%;
-	transform: translate(-20%,-40%);
+	transform: translate(-20%,-45%);
 	width: 70%;
 }
 #trSlider .slider-caption .slider-title{
@@ -547,7 +557,59 @@ header .custom-navbar .dropdown .dropdown-item:hover{
 }
 #crsContent .tr-card .card-syll p:hover{
 	background-color: rgba(0,0,0,0.04);
+	color: var(--primary-color)!important;
 }
+
+#courseList .row .card .card-img{
+	/*transition: .3s;*/
+	/*border: 4px solid transparent; !important;*/
+	/*filter: hue-rotate(300deg);*/
+}
+
+#courseList .row .card .card-img:hover{
+	filter: grayscale(50%);
+	/*transition: .3s;*/
+}
+#crsContent .pyy,.pyy{
+	padding-top: 100px !important;
+}
+#crsContent	.row .col-sm-3.top-100{
+	top: 100px !important;
+	position: sticky !important;
+	z-index: 1;
+	display: block !important;
+	position: -webkit-sticky;
+	height: 100%;
+}
+/*#crsContent	.row .col-sm-3.top-100 a:after{
+	position: absolute;
+	content: '∗';
+	visibility: hidden;
+	font-size: 12px;
+	padding-left: 2px;
+}*/
+#crsContent	.row .col-sm-3.top-100 a:hover{
+	color: var(--primary-color);
+}
+/*#crsContent	.row .col-sm-3.top-100 a:hover:after{
+ 	color: var(--primary-color);
+ 	visibility: visible;
+}*/
+#crsContent .cw-badge{
+	padding: 6px 12px;
+	display: inline-block;
+	border: 1px solid rgba(0,0,0,0.1);
+	font-size: 14px;
+  	font-family: 'San Francisco Medium';
+  	border-radius: 20px;
+  	cursor: pointer;
+	/*background-color: rgba(0,0,0,0.02);*/
+	margin: 0 2px;
+}
+#crsContent .cw-badge:hover{
+	box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+
 @media only screen and (max-width: 728px){
 	/*  order  */
 	.order-1{
@@ -565,6 +627,10 @@ header .custom-navbar .dropdown .dropdown-item:hover{
 	} 
 	#topbar #data a{
 		font-size: 12px;
+	}
+	/* navbar */
+	.nav-item{
+		padding-left: 14px;
 	}
 	.carousel-item img{
 		height: 90vh;
@@ -608,7 +674,9 @@ header .custom-navbar .dropdown .dropdown-item:hover{
 	#footer-content .col-md-6{
 		text-align: center;
 	}
-
+	#footer-links .row .col-md-3 h5{
+		margin-top: 30px;
+	}
 
 	/* ------------ Docs Page CSS --------------- */
 	/* --- Training Page CSS --- */
@@ -645,6 +713,27 @@ header .custom-navbar .dropdown .dropdown-item:hover{
 
 	#crsContent .col-sm-9 .d-flex{
 		display: block !important;
+	}
+	#crsContent .pyy{
+		padding-top: 20px!important;
+	}
+	#crsContent	.row .col-sm-3.top-100{
+		position: relative !important;
+		z-index: 1;
+		display: block !important;
+		position: -webkit-relative;
+		height: 100%;
+	}
+
+	#crsContent.px-5{
+		padding-left: 1rem!important;
+		padding-right: 1rem!important;
+	}
+	#crsContent .w-50{
+		width: 100%!important;
+	}
+	#crsContent .tr-card .card-syll p:hover{
+		color: var(--primary-color)!important;
 	}
 
 }
